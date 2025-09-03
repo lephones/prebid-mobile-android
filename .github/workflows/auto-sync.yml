@@ -40,6 +40,6 @@ jobs:
       - name: Merge upstream into fork
         if: steps.check.outputs.safe == 'true'
         run: |
-          git checkout main
-          git merge upstream/main --no-edit || true
-          git push origin main
+          git checkout master
+          git merge upstream/master --no-edit || true
+          git push origin master
