@@ -23,8 +23,8 @@ jobs:
       - name: Compare commit counts
         id: check
         run: |
-          FORK_COMMITS=$(git rev-list --count origin/main)
-          UPSTREAM_COMMITS=$(git rev-list --count upstream/main)
+          FORK_COMMITS=$(git rev-list --count origin/master)
+          UPSTREAM_COMMITS=$(git rev-list --count upstream/master)
 
           echo "fork commits: $FORK_COMMITS"
           echo "upstream commits: $UPSTREAM_COMMITS"
