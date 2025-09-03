@@ -24,8 +24,8 @@ jobs:
         id: check
         run: |
           # 拿所有分支的 commit 数（以 main 为基准，如果没有 main 改成 master）
-          FORK_COMMITS=$(git rev-list --count origin/main || echo 0)
-          UPSTREAM_COMMITS=$(git rev-list --count upstream/main || echo 0)
+          FORK_COMMITS=$(git rev-list --count origin/master || echo 0)
+          UPSTREAM_COMMITS=$(git rev-list --count upstream/master || echo 0)
 
           echo "Fork commits: $FORK_COMMITS"
           echo "Upstream commits: $UPSTREAM_COMMITS"
